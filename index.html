@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Teaching Hub - Astrophysics, Waves & Practice Quiz</title>
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        /* Navigation Tabs */
+        .nav-tabs {
+            max-width: 1100px;
+            margin: -25px auto 30px auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+        .tab-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary);
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .formula-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        /* Quiz Styles */
+        .question-box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .question-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .options-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options-list li {
+            padding: 8px 12px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+        .answer-toggle {
+            background: #e2e8f0;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .answer-toggle:hover {
+            background: #cbd5e1;
+        }
+        .answer-key {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            color: #065f46;
+            font-size: 0.95rem;
+            border-radius: 0 6px 6px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            border-top: 1px solid var(--border);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fa-solid fa-graduation-cap"></i> Physics Teaching Hub</h1>
+    <p>Form 3 Physics: Astrophysics, Wave Basics, Calculations & Practice Assessment</p>
+</header>
+
+<!-- Navigation Tabs -->
+<div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('astro')"><i class="fa-solid fa-earth-americas"></i> Astrophysics & Stars</button>
+    <button class="tab-btn" onclick="switchTab('waves')"><i class="fa-solid fa-water"></i> Wave Basics</button>
+    <button class="tab-btn" onclick="switchTab('math')"><i class="fa-solid fa-calculator"></i> Formulas & Math</button>
+    <button class="tab-btn" onclick="switchTab('quiz')"><i class="fa-solid fa-pen-to-square"></i> Practice Quiz (F.3)</button>
+</div>
+
+<div class="container">
+
+    <!-- TAB 1: ASTROPHYSICS & STARS -->
+    <div id="astro" class="tab-content active">
+        <div class="card">
+            <h2><i class="fa-solid fa-star"></i> Astrophysics Core Notes</h2>
+            <ul>
+                <li><strong>Solar System Location:</strong> Located in the <strong>Milky Way</strong> galaxy[cite: 3, 9].</li>
+                <li><strong>Planetary Orbit Force:</strong> Kept in orbit around the Sun by <strong>gravity</strong> (gravitational attraction)[cite: 3, 9].</li>
+                <li><strong>Galaxies:</strong> A large collection of stars is called a <strong>galaxy</strong>[cite: 3, 9].</li>
+                <li><strong>Stellar Life Cycles:</strong> Medium stars become Red Giants $\rightarrow$ White Dwarfs[cite: 3, 6, 9]. Massive stars become Red Supergiants $\rightarrow$ Supernova $\rightarrow$ Neutron Star or Black Hole[cite: 3, 6, 9].</li>
+                <li><strong>Red-Shift:</strong> Wavelength of light from distant galaxies moving away from us increases (red-shifted)[cite: 3, 9].</li>
+                <li><strong>Big Bang Theory:</strong> Supported by <strong>Cosmic Microwave Background (CMB)</strong> radiation[cite: 3, 9].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TAB 2: WAVE BASICS -->
+    <div id="waves" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-water"></i> Wave Basics Notes</h2>
+            <ul>
+                <li><strong>Transverse Waves:</strong> Particles vibrate perpendicular to the wave direction (e.g., light waves).</li>
+                <li><strong>Longitudinal Waves:</strong> Particles vibrate parallel to the wave direction featuring compressions and rarefactions (e.g., sound waves)[cite: 4].</li>
+                <li><strong>Amplitude:</strong> Maximum displacement of a wave from its rest position[cite: 4].</li>
+                <li><strong>Wavelength ($\lambda$):</strong> Distance between identical points on adjacent waves[cite: 4].</li>
+                <li><strong>Frequency ($f$):</strong> Number of oscillations per second, measured in Hertz (Hz)[cite: 4, 8].</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TAB 3: FORMULAS & MATH -->
+    <div id="math" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-calculator"></i> Key Formulas & Calculations</h2>
+            
+            <h3>1. Wave Speed Equation</h3>
+            <div class="formula-box">
+                v = f × &lambda; <br>
+                (Wave Speed = Frequency × Wavelength)[cite: 4, 8]
+            </div>
+
+            <h3>2. Frequency & Time Period</h3>
+            <div class="formula-box">
+                f = number of oscillations / time[cite: 10] <br>
+                Time Period (T) = 1 / f[cite: 4, 8]
+            </div>
+
+            <h3>3. Orbital Speed Equation</h3>
+            <div class="formula-box">
+                v = (2 &pi; r) / T <br>
+                (Orbital Speed = 2 × &pi; × Orbital Radius / Time Period)[cite: 5]
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 4: PRACTICE QUIZ (FORM 3 LEVEL) -->
+    <div id="quiz" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-clipboard-question"></i> Form 3 Physics Practice Assessment</h2>
+            <p>Test your knowledge with these Fill-in-the-Blanks, Multiple Choice Questions (MCQ), and Short/Long Answer Questions.</p>
+
+            <!-- SECTION A: FILL IN THE BLANKS -->
+            <h3>Section A: Fill in the Blanks</h3>
+            
+            <div class="question-box">
+                <div class="question-title">1. Our solar system is located in the ________ galaxy.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('ans1')">Show Answer</button>
+                <div id="ans1" class="answer-key">Answer: Milky Way[cite: 3, 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">2. The force that keeps planets in orbit around the Sun is ________.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('ans2')">Show Answer</button>
+                <div id="ans2" class="answer-key">Answer: gravity (or gravitational attraction)[cite: 3, 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">3. The equation linking wave speed, frequency, and wavelength is v = ________ × &lambda;.[cite: 4, 8]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('ans3')">Show Answer</button>
+                <div id="ans3" class="answer-key">Answer: f (frequency)[cite: 4, 8]</div>
+            </div>
+
+            <!-- SECTION B: MULTIPLE CHOICE QUESTIONS -->
+            <h3>Section B: Multiple Choice Questions (MCQ)</h3>
+
+            <div class="question-box">
+                <div class="question-title">1. What is made of ice and dust, orbits the Sun in a highly elliptical orbit, and travels faster when nearer the Sun?[cite: 3, 9]</div>
+                <ul class="options-list">
+                    <li>A. An asteroid[cite: 9]</li>
+                    <li>B. A comet[cite: 9]</li>
+                    <li>C. A moon[cite: 9]</li>
+                    <li>D. A planet[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('ans4')">Show Answer</button>
+                <div id="ans4" class="answer-key">Answer: B. A comet[cite: 3, 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">2. Light from distant galaxies observed with a longer wavelength than expected is called:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Blue-shift[cite: 9]</li>
+                    <li>B. Refraction[cite: 9]</li>
+                    <li>C. Reflection[cite: 9]</li>
+                    <li>D. Red-shift[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('ans5')">Show Answer</button>
+                <div id="ans5" class="answer-key">Answer: D. Red-shift[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">3. Which of these stars has the shortest main sequence lifetime?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. A small red star[cite: 3]</li>
+                    <li>B. A medium yellow star[cite: 3]</li>
+                    <li>C. A large blue star[cite: 3]</li>
+                    <li>D. They all have the same lifetime[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('ans6')">Show Answer</button>
+                <div id="ans6" class="answer-key">Answer: C. A large blue star[cite: 3] (Massive stars burn through their hydrogen fuel much faster).</div>
+            </div>
+
+            <!-- SECTION C: SHORT & LONG QUESTIONS -->
+            <h3>Section C: Short & Long Answer Questions</h3>
+
+            <div class="question-box">
+                <div class="question-title">1. Describe the life cycle of a massive star starting from a cloud of dust and gas up to its final stages.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('ans7')">Show Answer / Marking Scheme</button>
+                <div id="ans7" class="answer-key">
+                    <strong>Marking Scheme:</strong><br>
+                    1. Starts as a nebula (cloud of dust and gas) which collapses due to gravity to form a protostar[cite: 3].<br>
+                    2. Nuclear fusion begins, turning it into a main sequence star[cite: 3].<br>
+                    3. When hydrogen runs out, it expands into a red supergiant[cite: 3].<br>
+                    4. The core collapses rapidly in a massive supernova explosion[cite: 3].<br>
+                    5. The remaining core forms a very dense neutron star, or a black hole if the mass is extremely high[cite: 3].
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">2. Calculation: A signal generator is set to 50 Hz, and the measured wavelength is 6.8 m. Calculate the speed of sound in air.[cite: 8]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('ans8')">Show Answer / Calculation Steps</button>
+                <div id="ans8" class="answer-key">
+                    <strong>Working & Answer:</strong><br>
+                    Formula: v = f × &lambda;[cite: 4, 8]<br>
+                    v = 50 Hz × 6.8 m[cite: 8]<br>
+                    v = <strong>340 m/s</strong>[cite: 8]
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Physics Teaching Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+
+    function toggleAnswer(answerId) {
+        const ansBox = document.getElementById(answerId);
+        if (ansBox.style.display === "block") {
+            ansBox.style.display = "none";
+        } else {
+            ansBox.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
