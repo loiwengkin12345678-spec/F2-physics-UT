@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics Teaching Hub - Astrophysics, Waves & Practice Quiz</title>
+    <title>Form 3 Physics Learning Hub - Astrophysics & Waves</title>
     <!-- Font Awesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
         .tab-btn {
             background: var(--card-bg);
             border: 2px solid var(--border);
-            padding: 12px 20px;
+            padding: 12px 18px;
             border-radius: 10px;
             font-weight: 600;
             color: var(--text);
@@ -98,7 +98,7 @@
         }
         h3 {
             color: var(--secondary);
-            margin-top: 20px;
+            margin-top: 25px;
         }
         ul {
             padding-left: 20px;
@@ -193,164 +193,486 @@
 <body>
 
 <header>
-    <h1><i class="fa-solid fa-graduation-cap"></i> Physics Teaching Hub</h1>
-    <p>Form 3 Physics: Astrophysics, Wave Basics, Calculations & Practice Assessment</p>
+    <h1><i class="fa-solid fa-graduation-cap"></i> Form 3 Physics Teaching Hub</h1>
+    <p>Astrophysics, Stellar Evolution, Gravity, Waves & Complete Practice Assessments</p>
 </header>
 
 <!-- Navigation Tabs -->
 <div class="nav-tabs">
-    <button class="tab-btn active" onclick="switchTab('astro')"><i class="fa-solid fa-earth-americas"></i> Astrophysics & Stars</button>
-    <button class="tab-btn" onclick="switchTab('waves')"><i class="fa-solid fa-water"></i> Wave Basics</button>
-    <button class="tab-btn" onclick="switchTab('math')"><i class="fa-solid fa-calculator"></i> Formulas & Math</button>
-    <button class="tab-btn" onclick="switchTab('quiz')"><i class="fa-solid fa-pen-to-square"></i> Practice Quiz (F.3)</button>
+    <button class="tab-btn active" onclick="switchTab('notes')"><i class="fa-solid fa-book"></i> Revision Notes</button>
+    <button class="tab-btn" onclick="switchTab('blanks')"><i class="fa-solid fa-pen"></i> Fill-in-the-Blanks (20)</button>
+    <button class="tab-btn" onclick="switchTab('mcq')"><i class="fa-solid fa-list-check"></i> MCQs (20)</button>
+    <button class="tab-btn" onclick="switchTab('shortlong')"><i class="fa-solid fa-pen-nib"></i> Short & Long Qs (6)</button>
 </div>
 
 <div class="container">
 
-    <!-- TAB 1: ASTROPHYSICS & STARS -->
-    <div id="astro" class="tab-content active">
+    <!-- TAB 1: REVISION NOTES -->
+    <div id="notes" class="tab-content active">
         <div class="card">
-            <h2><i class="fa-solid fa-star"></i> Astrophysics Core Notes</h2>
+            <h2><i class="fa-solid fa-star"></i> 1. Astrophysics & Stellar Evolution</h2>
             <ul>
-                <li><strong>Solar System Location:</strong> Located in the <strong>Milky Way</strong> galaxy[cite: 3, 9].</li>
-                <li><strong>Planetary Orbit Force:</strong> Kept in orbit around the Sun by <strong>gravity</strong> (gravitational attraction)[cite: 3, 9].</li>
-                <li><strong>Galaxies:</strong> A large collection of stars is called a <strong>galaxy</strong>[cite: 3, 9].</li>
-                <li><strong>Stellar Life Cycles:</strong> Medium stars become Red Giants $\rightarrow$ White Dwarfs[cite: 3, 6, 9]. Massive stars become Red Supergiants $\rightarrow$ Supernova $\rightarrow$ Neutron Star or Black Hole[cite: 3, 6, 9].</li>
-                <li><strong>Red-Shift:</strong> Wavelength of light from distant galaxies moving away from us increases (red-shifted)[cite: 3, 9].</li>
-                <li><strong>Big Bang Theory:</strong> Supported by <strong>Cosmic Microwave Background (CMB)</strong> radiation[cite: 3, 9].</li>
+                <li><strong>Our Location:</strong> Solar system is located in the <strong>Milky Way</strong> galaxy[cite: 3, 9]. A large collection of stars is called a galaxy[cite: 3, 9].</li>
+                <li><strong>Stellar Life Cycle (Medium Star):</strong> Nebula $\rightarrow$ Protostar $\rightarrow$ Main Sequence $\rightarrow$ Red Giant $\rightarrow$ White Dwarf[cite: 3, 6, 9].</li>
+                <li><strong>Stellar Life Cycle (Massive Star):</strong> Nebula $\rightarrow$ Protostar $\rightarrow$ Main Sequence $\rightarrow$ Red Supergiant $\rightarrow$ Supernova $\rightarrow$ Neutron Star or Black Hole[cite: 3, 6, 9].</li>
+                <li><strong>H-R Diagram:</strong> Vertical axis represents absolute magnitude/luminosity; horizontal axis represents decreasing temperature[cite: 6, 7].</li>
+                <li><strong>Cosmology:</strong> Red-shift indicates distant galaxies are moving away[cite: 3, 9]. Cosmic Microwave Background (CMB) radiation supports the Big Bang theory[cite: 3, 9].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-globe"></i> 2. Gravity & Orbits</h2>
+            <ul>
+                <li><strong>Planets Order:</strong> Mercury, Venus, Earth, Mars (from the Sun outwards)[cite: 9].</li>
+                <li><strong>Comets:</strong> Made of ice and dust, highly elliptical orbits, travel fastest when closest to the Sun due to stronger gravitational pull[cite: 3, 9].</li>
+                <li><strong>Centripetal Force:</strong> Force acting towards the center for circular motion (provided by gravity for orbits)[cite: 3, 9].</li>
+                <li><strong>Gravitational Field Strength:</strong> Determined by both the mass of the body and the distance from it[cite: 3].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-water"></i> 3. Wave Basics & Calculations</h2>
+            <ul>
+                <li><strong>Transverse vs Longitudinal:</strong> Transverse waves vibrate perpendicular to wave direction; longitudinal waves vibrate parallel (features compressions & rarefactions)[cite: 4].</li>
+                <li><strong>Wave Parameters:</strong> Amplitude (max displacement), Wavelength ($\lambda$), Frequency ($f$, oscillations per second in Hz)[cite: 4, 8].</li>
+                <li><strong>Formulas:</strong> 
+                    <div class="formula-box">
+                        $v = f \times \lambda$ (Wave Speed = Frequency × Wavelength)[cite: 4, 8]<br>
+                        $f = \frac{\text{Number of Oscillations}}{\text{Time}}$[cite: 10] &nbsp;|&nbsp; $T = \frac{1}{f}$[cite: 4, 8]<br>
+                        $v = \frac{2\pi r}{T}$ (Orbital Speed)[cite: 5]
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 
-    <!-- TAB 2: WAVE BASICS -->
-    <div id="waves" class="tab-content">
+    <!-- TAB 2: FILL IN THE BLANKS (20 Qs) -->
+    <div id="blanks" class="tab-content">
         <div class="card">
-            <h2><i class="fa-solid fa-water"></i> Wave Basics Notes</h2>
-            <ul>
-                <li><strong>Transverse Waves:</strong> Particles vibrate perpendicular to the wave direction (e.g., light waves).</li>
-                <li><strong>Longitudinal Waves:</strong> Particles vibrate parallel to the wave direction featuring compressions and rarefactions (e.g., sound waves)[cite: 4].</li>
-                <li><strong>Amplitude:</strong> Maximum displacement of a wave from its rest position[cite: 4].</li>
-                <li><strong>Wavelength ($\lambda$):</strong> Distance between identical points on adjacent waves[cite: 4].</li>
-                <li><strong>Frequency ($f$):</strong> Number of oscillations per second, measured in Hertz (Hz)[cite: 4, 8].</li>
-            </ul>
-        </div>
-    </div>
+            <h2><i class="fa-solid fa-pen"></i> Fill-in-the-Blanks (20 Questions)</h2>
+            <p>Test your recall of key terms and facts across astrophysics and waves.</p>
 
-    <!-- TAB 3: FORMULAS & MATH -->
-    <div id="math" class="tab-content">
-        <div class="card">
-            <h2><i class="fa-solid fa-calculator"></i> Key Formulas & Calculations</h2>
-            
-            <h3>1. Wave Speed Equation</h3>
-            <div class="formula-box">
-                v = f × &lambda; <br>
-                (Wave Speed = Frequency × Wavelength)[cite: 4, 8]
-            </div>
-
-            <h3>2. Frequency & Time Period</h3>
-            <div class="formula-box">
-                f = number of oscillations / time[cite: 10] <br>
-                Time Period (T) = 1 / f[cite: 4, 8]
-            </div>
-
-            <h3>3. Orbital Speed Equation</h3>
-            <div class="formula-box">
-                v = (2 &pi; r) / T <br>
-                (Orbital Speed = 2 × &pi; × Orbital Radius / Time Period)[cite: 5]
-            </div>
-        </div>
-    </div>
-
-    <!-- TAB 4: PRACTICE QUIZ (FORM 3 LEVEL) -->
-    <div id="quiz" class="tab-content">
-        <div class="card">
-            <h2><i class="fa-solid fa-clipboard-question"></i> Form 3 Physics Practice Assessment</h2>
-            <p>Test your knowledge with these Fill-in-the-Blanks, Multiple Choice Questions (MCQ), and Short/Long Answer Questions.</p>
-
-            <!-- SECTION A: FILL IN THE BLANKS -->
-            <h3>Section A: Fill in the Blanks</h3>
-            
+            <!-- Q1-20 -->
             <div class="question-box">
                 <div class="question-title">1. Our solar system is located in the ________ galaxy.[cite: 3, 9]</div>
-                <button class="answer-toggle" onclick="toggleAnswer('ans1')">Show Answer</button>
-                <div id="ans1" class="answer-key">Answer: Milky Way[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b1')">Show Answer</button>
+                <div id="b1" class="answer-key">Answer: Milky Way[cite: 3, 9]</div>
             </div>
-
             <div class="question-box">
                 <div class="question-title">2. The force that keeps planets in orbit around the Sun is ________.[cite: 3, 9]</div>
-                <button class="answer-toggle" onclick="toggleAnswer('ans2')">Show Answer</button>
-                <div id="ans2" class="answer-key">Answer: gravity (or gravitational attraction)[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b2')">Show Answer</button>
+                <div id="b2" class="answer-key">Answer: gravity (or gravitational attraction)[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">3. A large collection of stars is called a ________.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b3')">Show Answer</button>
+                <div id="b3" class="answer-key">Answer: galaxy[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">4. When a star runs out of hydrogen, a small-to-medium-sized star like our Sun will become a ________.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b4')">Show Answer</button>
+                <div id="b4" class="answer-key">Answer: red giant[cite: 3]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">5. The color of a star depends on its ________ temperature.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b5')">Show Answer</button>
+                <div id="b5" class="answer-key">Answer: surface[cite: 3]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">6. The ________ diagram plots absolute magnitude against temperature for stars.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b6')">Show Answer</button>
+                <div id="b6" class="answer-key">Answer: Hertzsprung-Russell (or H-R)[cite: 3]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">7. The apparent change in wavelength of light from distant galaxies moving away from us is called ________.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b7')">Show Answer</button>
+                <div id="b7" class="answer-key">Answer: red-shift[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">8. The Cosmic ________ Background radiation is evidence supporting the Big Bang theory.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b8')">Show Answer</button>
+                <div id="b8" class="answer-key">Answer: Microwave[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">9. For an object in stable orbit, if its speed increases, the ________ of its orbit must decrease.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b9')">Show Answer</button>
+                <div id="b9" class="answer-key">Answer: radius[cite: 3]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">10. A comet's orbit is highly ________, unlike the nearly circular orbits of planets.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b10')">Show Answer</button>
+                <div id="b10" class="answer-key">Answer: elliptical[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">11. Transverse waves have particles that vibrate ________ to the wave direction.[cite: 4]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b11')">Show Answer</button>
+                <div id="b11" class="answer-key">Answer: perpendicular[cite: 4]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">12. Longitudinal waves consist of compressions and ________.[cite: 4]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b12')">Show Answer</button>
+                <div id="b12" class="answer-key">Answer: rarefactions[cite: 4]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">13. The maximum displacement of a wave particle from its equilibrium position is called its ________.[cite: 4]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b13')">Show Answer</button>
+                <div id="b13" class="answer-key">Answer: amplitude[cite: 4]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">14. The distance between identical points on adjacent waves is known as the ________ ($\lambda$)[cite: 4].</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b14')">Show Answer</button>
+                <div id="b14" class="answer-key">Answer: wavelength[cite: 4]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">15. The number of complete oscillations or waves produced per second is called ________ ($f$)[cite: 4, 8].</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b15')">Show Answer</button>
+                <div id="b15" class="answer-key">Answer: frequency[cite: 4, 8]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">16. The SI unit for frequency is ________ (Hz)[cite: 4, 8].</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b16')">Show Answer</button>
+                <div id="b16" class="answer-key">Answer: Hertz[cite: 4, 8]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">17. The equation linking wave speed, frequency, and wavelength is $v = f \times$ ________.[cite: 4, 8]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b17')">Show Answer</button>
+                <div id="b17" class="answer-key">Answer: wavelength (or $\lambda$)[cite: 4, 8]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">18. When an object moves in a circle, the net force acting towards the center is called ________ force.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b18')">Show Answer</button>
+                <div id="b18" class="answer-key">Answer: centripetal[cite: 3, 9]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">19. The gravitational field strength around a celestial body is determined by the mass of the body and the ________ from it.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b19')">Show Answer</button>
+                <div id="b19" class="answer-key">Answer: distance[cite: 3]</div>
+            </div>
+            <div class="question-box">
+                <div class="question-title">20. Orbital speed can be calculated with the formula $v = \frac{2\pi r}{______}$.[cite: 5]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('b20')">Show Answer</button>
+                <div id="b20" class="answer-key">Answer: T (Time period)[cite: 5]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 3: MULTIPLE CHOICE QUESTIONS (20 Qs) -->
+    <div id="mcq" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-list-check"></i> Multiple Choice Questions (20 Questions)</h2>
+            <p>Select the correct alphabet for each question based on Form 3 Physics topics.</p>
+
+            <!-- MCQ 1-20 -->
+            <div class="question-box">
+                <div class="question-title">1. A galaxy is best described as:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. A single star and its planets[cite: 9]</li>
+                    <li>B. A large collection of stars[cite: 9]</li>
+                    <li>C. A large collection of galaxies[cite: 9]</li>
+                    <li>D. A cloud of dust and gas[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m1')">Show Answer</button>
+                <div id="m1" class="answer-key">Answer: B. A large collection of stars[cite: 9]</div>
             </div>
 
             <div class="question-box">
-                <div class="question-title">3. The equation linking wave speed, frequency, and wavelength is v = ________ × &lambda;.[cite: 4, 8]</div>
-                <button class="answer-toggle" onclick="toggleAnswer('ans3')">Show Answer</button>
-                <div id="ans3" class="answer-key">Answer: f (frequency)[cite: 4, 8]</div>
+                <div class="question-title">2. In order from the Sun outwards, the first four planets are:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Mercury, Venus, Earth, Mars[cite: 9]</li>
+                    <li>B. Venus, Mercury, Earth, Mars[cite: 9]</li>
+                    <li>C. Mercury, Earth, Venus, Mars[cite: 9]</li>
+                    <li>D. Mars, Earth, Venus, Mercury[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m2')">Show Answer</button>
+                <div id="m2" class="answer-key">Answer: A. Mercury, Venus, Earth, Mars[cite: 9]</div>
             </div>
 
-            <!-- SECTION B: MULTIPLE CHOICE QUESTIONS -->
-            <h3>Section B: Multiple Choice Questions (MCQ)</h3>
-
             <div class="question-box">
-                <div class="question-title">1. What is made of ice and dust, orbits the Sun in a highly elliptical orbit, and travels faster when nearer the Sun?[cite: 3, 9]</div>
+                <div class="question-title">3. Which object is made of ice and dust, orbits the Sun in a highly elliptical orbit, and travels faster when nearer the Sun?[cite: 3, 9]</div>
                 <ul class="options-list">
                     <li>A. An asteroid[cite: 9]</li>
                     <li>B. A comet[cite: 9]</li>
                     <li>C. A moon[cite: 9]</li>
                     <li>D. A planet[cite: 9]</li>
                 </ul>
-                <button class="answer-toggle" onclick="toggleAnswer('ans4')">Show Answer</button>
-                <div id="ans4" class="answer-key">Answer: B. A comet[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('m3')">Show Answer</button>
+                <div id="m3" class="answer-key">Answer: B. A comet[cite: 3, 9]</div>
             </div>
 
             <div class="question-box">
-                <div class="question-title">2. Light from distant galaxies observed with a longer wavelength than expected is called:[cite: 9]</div>
+                <div class="question-title">4. The force that keeps the planets in orbit around the Sun is:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Magnetic force[cite: 9]</li>
+                    <li>B. Friction[cite: 9]</li>
+                    <li>C. Gravitational attraction[cite: 9]</li>
+                    <li>D. Air resistance[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m4')">Show Answer</button>
+                <div id="m4" class="answer-key">Answer: C. Gravitational attraction[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">5. When an object moves in a circle, the force that acts towards the centre of the circle is called the:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Centrifugal force[cite: 9]</li>
+                    <li>B. Centripetal force[cite: 9]</li>
+                    <li>C. Thermal expansion force[cite: 9]</li>
+                    <li>D. Frictional force[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m5')">Show Answer</button>
+                <div id="m5" class="answer-key">Answer: B. Centripetal force[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">6. Light from distant galaxies is observed with a longer wavelength than expected. This effect is called:[cite: 9]</div>
                 <ul class="options-list">
                     <li>A. Blue-shift[cite: 9]</li>
                     <li>B. Refraction[cite: 9]</li>
                     <li>C. Reflection[cite: 9]</li>
                     <li>D. Red-shift[cite: 9]</li>
                 </ul>
-                <button class="answer-toggle" onclick="toggleAnswer('ans5')">Show Answer</button>
-                <div id="ans5" class="answer-key">Answer: D. Red-shift[cite: 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('m6')">Show Answer</button>
+                <div id="m6" class="answer-key">Answer: D. Red-shift[cite: 9]</div>
             </div>
 
             <div class="question-box">
-                <div class="question-title">3. Which of these stars has the shortest main sequence lifetime?[cite: 3]</div>
+                <div class="question-title">7. According to the Big Bang model, the leftover energy detected from all directions as low-frequency microwave radiation is:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Cosmic microwave background (CMB) radiation[cite: 9]</li>
+                    <li>B. Absolute magnitude[cite: 9]</li>
+                    <li>C. Red-shift[cite: 9]</li>
+                    <li>D. Visible spectrum[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m7')">Show Answer</button>
+                <div id="m7" class="answer-key">Answer: A. Cosmic microwave background (CMB) radiation[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">8. A small-to-medium-sized star like the Sun will eventually end its life as a:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. Black hole[cite: 9]</li>
+                    <li>B. Neutron star[cite: 9]</li>
+                    <li>C. White dwarf[cite: 9]</li>
+                    <li>D. Supernova[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m8')">Show Answer</button>
+                <div id="m8" class="answer-key">Answer: C. White dwarf[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">9. After a very large star explodes in a supernova, the very dense core left behind is called:[cite: 9]</div>
+                <ul class="options-list">
+                    <li>A. A protostar[cite: 9]</li>
+                    <li>B. A red giant[cite: 9]</li>
+                    <li>C. A white dwarf[cite: 9]</li>
+                    <li>D. A neutron star[cite: 9]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m9')">Show Answer</button>
+                <div id="m9" class="answer-key">Answer: D. A neutron star[cite: 9]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">10. What does absolute magnitude measure?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. Apparent brightness from Earth[cite: 3]</li>
+                    <li>B. Brightness at a standard distance[cite: 3]</li>
+                    <li>C. Size of the star[cite: 3]</li>
+                    <li>D. Temperature of the star[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m10')">Show Answer</button>
+                <div id="m10" class="answer-key">Answer: B. Brightness at a standard distance[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">11. What does red-shift indicate about a galaxy?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. It's moving toward us[cite: 3]</li>
+                    <li>B. It's moving away from us[cite: 3]</li>
+                    <li>C. It's very hot[cite: 3]</li>
+                    <li>D. It's about to explode[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m11')">Show Answer</button>
+                <div id="m11" class="answer-key">Answer: B. It's moving away from us[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">12. Which of these orbits is most elliptical?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. Earth's orbit[cite: 3]</li>
+                    <li>B. The Moon's orbit[cite: 3]</li>
+                    <li>C. A comet's orbit[cite: 3]</li>
+                    <li>D. A geostationary satellite's orbit[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m12')">Show Answer</button>
+                <div id="m12" class="answer-key">Answer: C. A comet's orbit[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">13. What provides the centripetal force for planetary orbits?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. Electromagnetism[cite: 3]</li>
+                    <li>B. Gravity[cite: 3]</li>
+                    <li>C. Nuclear force[cite: 3]</li>
+                    <li>D. Friction[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m13')">Show Answer</button>
+                <div id="m13" class="answer-key">Answer: B. Gravity[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">14. What determines the gravitational field strength around a celestial body?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. Only the mass of the body[cite: 3]</li>
+                    <li>B. Only the distance from the body[cite: 3]</li>
+                    <li>C. Both the mass of the body and the distance from it[cite: 3]</li>
+                    <li>D. The temperature of the body[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m14')">Show Answer</button>
+                <div id="m14" class="answer-key">Answer: C. Both the mass of the body and the distance from it[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">15. What does CMB stand for?[cite: 3]</div>
+                <ul class="options-list">
+                    <li>A. Cosmic Microwave Background[cite: 3]</li>
+                    <li>B. Celestial Magnetic Beam[cite: 3]</li>
+                    <li>C. Central Massive Blackhole[cite: 3]</li>
+                    <li>D. Circular Motion Balance[cite: 3]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m15')">Show Answer</button>
+                <div id="m15" class="answer-key">Answer: A. Cosmic Microwave Background[cite: 3]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">16. Where is the Sun located on the Hertzsprung-Russell diagram?[cite: 7]</div>
+                <ul class="options-list">
+                    <li>A. In region A[cite: 7]</li>
+                    <li>B. In region B (Main Sequence)[cite: 7]</li>
+                    <li>C. In region C[cite: 7]</li>
+                    <li>D. In region D[cite: 7]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m16')">Show Answer</button>
+                <div id="m16" class="answer-key">Answer: B. In region B[cite: 7]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">17. What does the vertical axis of the Hertzsprung-Russell diagram represent?[cite: 7]</div>
+                <ul class="options-list">
+                    <li>A. Surface temperature[cite: 7]</li>
+                    <li>B. Luminosity / Absolute magnitude[cite: 7]</li>
+                    <li>C. Mass of the star[cite: 7]</li>
+                    <li>D. Age of the star[cite: 7]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m17')">Show Answer</button>
+                <div id="m17" class="answer-key">Answer: B. Luminosity / Absolute magnitude[cite: 7]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">18. Which star color is the hottest?[cite: 7]</div>
+                <ul class="options-list">
+                    <li>A. Red[cite: 7]</li>
+                    <li>B. Yellow[cite: 7]</li>
+                    <li>C. White[cite: 7]</li>
+                    <li>D. Blue[cite: 7]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m18')">Show Answer</button>
+                <div id="m18" class="answer-key">Answer: D. Blue[cite: 7]</div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">19. Which of these has the shortest main sequence lifetime?[cite: 3]</div>
                 <ul class="options-list">
                     <li>A. A small red star[cite: 3]</li>
                     <li>B. A medium yellow star[cite: 3]</li>
                     <li>C. A large blue star[cite: 3]</li>
                     <li>D. They all have the same lifetime[cite: 3]</li>
                 </ul>
-                <button class="answer-toggle" onclick="toggleAnswer('ans6')">Show Answer</button>
-                <div id="ans6" class="answer-key">Answer: C. A large blue star[cite: 3] (Massive stars burn through their hydrogen fuel much faster).</div>
+                <button class="answer-toggle" onclick="toggleAnswer('m19')">Show Answer</button>
+                <div id="m19" class="answer-key">Answer: C. A large blue star[cite: 3]</div>
             </div>
 
-            <!-- SECTION C: SHORT & LONG QUESTIONS -->
-            <h3>Section C: Short & Long Answer Questions</h3>
+            <div class="question-box">
+                <div class="question-title">20. What is meant by the amplitude of a wave?[cite: 4]</div>
+                <ul class="options-list">
+                    <li>A. The distance from crest to crest[cite: 4]</li>
+                    <li>B. The maximum displacement of a wave particle from its equilibrium position[cite: 4]</li>
+                    <li>C. The number of waves per second[cite: 4]</li>
+                    <li>D. The speed of the wave[cite: 4]</li>
+                </ul>
+                <button class="answer-toggle" onclick="toggleAnswer('m20')">Show Answer</button>
+                <div id="m20" class="answer-key">Answer: B. The maximum displacement of a wave particle from its equilibrium position[cite: 4]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 4: SHORT & LONG QUESTIONS (6 Qs) -->
+    <div id="shortlong" class="tab-content">
+        <div class="card">
+            <h2><i class="fa-solid fa-pen-nib"></i> Short & Long Answer Questions (6 Questions)</h2>
+            <p>Form 3 analytical and calculation practice questions.</p>
 
             <div class="question-box">
-                <div class="question-title">1. Describe the life cycle of a massive star starting from a cloud of dust and gas up to its final stages.[cite: 3]</div>
-                <button class="answer-toggle" onclick="toggleAnswer('ans7')">Show Answer / Marking Scheme</button>
-                <div id="ans7" class="answer-key">
-                    <strong>Marking Scheme:</strong><br>
-                    1. Starts as a nebula (cloud of dust and gas) which collapses due to gravity to form a protostar[cite: 3].<br>
-                    2. Nuclear fusion begins, turning it into a main sequence star[cite: 3].<br>
-                    3. When hydrogen runs out, it expands into a red supergiant[cite: 3].<br>
-                    4. The core collapses rapidly in a massive supernova explosion[cite: 3].<br>
-                    5. The remaining core forms a very dense neutron star, or a black hole if the mass is extremely high[cite: 3].
+                <div class="question-title">1. Describe the life cycle of a massive star like Betelgeuse, beginning from a cloud of dust and gas.[cite: 3]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl1')">Show Answer / Marking Scheme</button>
+                <div id="sl1" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    1. Starts as a nebula (cloud of dust and gas); gravity pulls the gas and dust together to form a protostar[cite: 3].<br>
+                    2. Nuclear fusion begins in the core, turning it into a main sequence star[cite: 3].<br>
+                    3. When core hydrogen runs out, the star expands to become a red supergiant[cite: 3].<br>
+                    4. Eventually, the core collapses rapidly in a massive supernova explosion[cite: 3].<br>
+                    5. After the supernova, the remaining dense core forms a neutron star, or a black hole if the mass is extremely high[cite: 3].
                 </div>
             </div>
 
             <div class="question-box">
-                <div class="question-title">2. Calculation: A signal generator is set to 50 Hz, and the measured wavelength is 6.8 m. Calculate the speed of sound in air.[cite: 8]</div>
-                <button class="answer-toggle" onclick="toggleAnswer('ans8')">Show Answer / Calculation Steps</button>
-                <div id="ans8" class="answer-key">
-                    <strong>Working & Answer:</strong><br>
-                    Formula: v = f × &lambda;[cite: 4, 8]<br>
-                    v = 50 Hz × 6.8 m[cite: 8]<br>
-                    v = <strong>340 m/s</strong>[cite: 8]
+                <div class="question-title">2. Explain why a comet's speed will be greatest when it is closest to the star in its elliptical orbit.[cite: 5]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl1b')">Show Answer / Marking Scheme</button>
+                <div id="sl1b" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    When the comet is closest to the star, the gravitational pull from the star is the strongest[cite: 5]. This strong gravitational force accelerates the comet, causing its orbital speed to be at its maximum.
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">3. A wave in a pond, travelling at $0.5\text{ m/s}$, makes a floating ball move up and down twice every second ($2\text{ Hz}$). Calculate the frequency and wavelength of the wave.[cite: 4]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl2')">Show Answer / Calculation Steps</button>
+                <div id="sl2" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    - Frequency ($f$) = 2 Hz (since it moves up and down twice per second)[cite: 4].<br>
+                    - Using the wave speed equation: $v = f \times \lambda$[cite: 4, 8]<br>
+                    - $0.5 = 2 \times \lambda$[cite: 4]<br>
+                    - $\lambda = \frac{0.5}{2} = \mathbf{0.25\text{ m}}$[cite: 4].
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">4. Explain what red-shift indicates about the movement of distant galaxies and how it provides evidence for the origin of the universe.[cite: 3, 9]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl3')">Show Answer / Marking Scheme</button>
+                <div id="sl3" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    Red-shift indicates that distant galaxies are moving away from us[cite: 3, 9], and the farther away they are, the faster they are moving. This shows that the universe is expanding, which supports the Big Bang model (where everything originated from a single hot, dense point).
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">5. State the main differences between transverse and longitudinal waves, and give one example of each type.[cite: 4]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl4')">Show Answer / Marking Scheme</button>
+                <div id="sl4" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    - **Transverse Waves:** Particles vibrate perpendicular to the direction of wave travel (Example: Light waves or water ripples)[cite: 4].<br>
+                    - **Longitudinal Waves:** Particles vibrate parallel to the direction of wave travel, creating compressions and rarefactions (Example: Sound waves)[cite: 4].
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-title">6. Calculation: Object B has an orbital radius of $42,000\text{ km}$ and a time period of $24\text{ hours}$. Calculate the orbital speed of object B in $\text{km/s}$ using scientific notation or standard form.[cite: 5]</div>
+                <button class="answer-toggle" onclick="toggleAnswer('sl5')">Show Answer / Calculation Steps</button>
+                <div id="sl5" class="answer-key">
+                    <strong>Answer:</strong><br>
+                    Formula: $v = \frac{2\pi r}{T}$[cite: 5]<br>
+                    - $r = 42,000\text{ km} = 42,000,000\text{ m}$ (or keep in km and convert time to seconds)<br>
+                    - Time $T = 24\text{ hours} = 24 \times 3600 = 86,400\text{ seconds}$<br>
+                    - $v = \frac{2 \times 3.14 \times 42,000,000}{86,400} \approx \mathbf{3,052.78\text{ m/s}}$ (or $3.05 \times 10^3\text{ m/s}$)[cite: 5].
                 </div>
             </div>
 
@@ -360,7 +682,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Physics Teaching Hub. All Rights Reserved.</p>
+    <p>&copy; 2026 Form 3 Physics Teaching Hub. All Rights Reserved.</p>
 </footer>
 
 <script>
